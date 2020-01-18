@@ -28,7 +28,7 @@ def turn(board)
   index = input_to_index(input)
     if valid_move?(board, index) == true
       move(board, index, character = "X")
-    else until valid_move?(board, index) == true
+    else while valid_move?(board, index) == false
       puts "Invalid. Please enter 1-9"
       input = gets.strip
       input_to_index(input)
